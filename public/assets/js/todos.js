@@ -1,4 +1,4 @@
-const todoList = new Vue({
+const todos = new Vue({
   el: '#todo-list',
   data: {
     user: '',

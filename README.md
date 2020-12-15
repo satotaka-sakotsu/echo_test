@@ -6,9 +6,11 @@ simple-webapp/
 │   └── sample.db
 ├── handler
 │   ├── auth.go
-│   └── handler.go
+│   ├── articles.go
+│   └── todos.go
 ├── model
 │   ├── db.go
+│   ├── aritcle.go
 │   ├── todo.go
 │   └── user.go
 ├── public
@@ -16,10 +18,14 @@ simple-webapp/
 │   │   └── js
 │   │       ├── login.js
 │   │       ├── signup.js
-│   │       └── todoList.js
+│   │       ├── artlcies.js
+│   │       ├── artlcie_dteail.js
+│   │       └── todos.js  
 │   ├── index.html
 │   ├── login.html
 │   ├── signup.html
+│   ├── articels.html
+│   ├── articel_dteail.html
 │   └── todos.html
 ├── README.md
 ├── go.mod

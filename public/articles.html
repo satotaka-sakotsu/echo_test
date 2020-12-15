@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script type="text/javascript">
+    if(localStorage.getItem('token') === null) {
+      location.href = '/'
+    }
+  </script>
+  <title>articles - Simple Article</title>
+</head>
+<body>
+<div id="article-list">
+  <h1 id="title">{{ user }}'s Articles</h1>
+  <div>
+    <div>
+      <input type="text" name="title" v-model="newArticle.title"
+             placeholder="title">
+    </div>
+    <div>
+      <input type="text" name="content" v-model="newArticle.content"
+             placeholder="content">
+    </div>
+    <button type="button" name="add" @click="postArticle">Add</button>
+  </div>
+  <div v-if="articles.length === 0">
+    <p>No your articles...</p>
+  </div>
+  <ul v-else id="article-list">
+    <li v-for="(article, index) in articles" :key="index">
+      <a :href="'/articles/' + article.id">
+        {{ article.title }}
+      </a>
+      <button type="button" name="delete" @click="deleteArticle(article.id)">X
+      </button>
+    </li>
+  </ul>
+  <button type="button" name="logout" @click="logout()">logout</button>
+</div>
+<script src="assets/js/articles.js"></script>
+</body>
+</html>

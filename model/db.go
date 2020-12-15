@@ -15,4 +15,5 @@ func init() {
 	}
 	db.AutoMigrate(&User{})
 	db.AutoMigrate(&Todo{})
+	db.AutoMigrate(&Article{})
 }
